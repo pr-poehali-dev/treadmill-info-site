@@ -4,16 +4,21 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Icon from '@/components/ui/icon';
 
 interface Treadmill {
   id: number;
   name: string;
   model: string;
+  maxSpeed: string;
+  power: string;
+  runningArea: string;
   image: string;
   gallery: string[];
   features: string[];
   description: string;
+  specs: { label: string; value: string }[];
   setup: string[];
   usage: string[];
   maintenance: string[];
@@ -26,14 +31,28 @@ const treadmills: Treadmill[] = [
     id: 1,
     name: 'ProRunner X5',
     model: 'PRX-5000',
+    maxSpeed: '20 км/ч',
+    power: '3.0 HP',
+    runningArea: '140 x 50 см',
     image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Амортизация', 'LCD дисплей', 'Bluetooth'],
-    description: 'Полная инструкция по эксплуатации беговой дорожки ProRunner X5. Следуйте указаниям для безопасного и эффективного использования.',
+    description: 'Профессиональная беговая дорожка ProRunner X5 создана для интенсивных тренировок дома. Мощный двигатель 3.0 HP обеспечивает плавный ход даже на максимальных скоростях до 20 км/ч.',
+    specs: [
+      { label: 'Максимальная скорость', value: '20 км/ч' },
+      { label: 'Мощность двигателя', value: '3.0 HP' },
+      { label: 'Размер бегового полотна', value: '140 x 50 см' },
+      { label: 'Максимальный вес пользователя', value: '150 кг' },
+      { label: 'Угол наклона', value: '0-15%' },
+      { label: 'Количество программ', value: '24' },
+      { label: 'Габариты', value: '180 x 85 x 145 см' },
+      { label: 'Вес', value: '85 кг' }
+    ],
     setup: [
       'Распакуйте беговую дорожку и проверьте комплектацию',
       'Установите дорожку на ровную поверхность на расстоянии минимум 1 метр от стен',
@@ -80,13 +99,28 @@ const treadmills: Treadmill[] = [
     id: 2,
     name: 'HomeRun Elite',
     model: 'HRE-2500',
+    maxSpeed: '16 км/ч',
+    power: '2.5 HP',
+    runningArea: '130 x 45 см',
     image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=600&fit=crop'
     ],
     features: ['Складная', 'USB порт', '12 программ'],
-    description: 'Инструкция по эксплуатации складной беговой дорожки HomeRun Elite для домашнего использования.',
+    description: 'HomeRun Elite — идеальное решение для домашних тренировок. Складная конструкция экономит место в квартире.',
+    specs: [
+      { label: 'Максимальная скорость', value: '16 км/ч' },
+      { label: 'Мощность двигателя', value: '2.5 HP' },
+      { label: 'Размер бегового полотна', value: '130 x 45 см' },
+      { label: 'Максимальный вес пользователя', value: '120 кг' },
+      { label: 'Угол наклона', value: '0-10%' },
+      { label: 'Количество программ', value: '12' },
+      { label: 'Габариты', value: '160 x 75 x 130 см' },
+      { label: 'Вес', value: '55 кг' }
+    ],
     setup: [
       'Аккуратно распакуйте дорожку и разложите на полу',
       'Поднимите деку дорожки до щелчка фиксатора',
@@ -128,13 +162,28 @@ const treadmills: Treadmill[] = [
     id: 3,
     name: 'FitMax Pro',
     model: 'FMP-3000',
+    maxSpeed: '18 км/ч',
+    power: '2.8 HP',
+    runningArea: '135 x 48 см',
     image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop'
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Wi-Fi', 'Пульсометр', 'Наклон 15%'],
-    description: 'Руководство по эксплуатации беговой дорожки FitMax Pro с функциями Wi-Fi и автоматическим наклоном.',
+    description: 'FitMax Pro сочетает современные технологии и надежность. Wi-Fi подключение позволяет синхронизировать тренировки с облаком.',
+    specs: [
+      { label: 'Максимальная скорость', value: '18 км/ч' },
+      { label: 'Мощность двигателя', value: '2.8 HP' },
+      { label: 'Размер бегового полотна', value: '135 x 48 см' },
+      { label: 'Максимальный вес пользователя', value: '130 кг' },
+      { label: 'Угол наклона', value: '0-15%' },
+      { label: 'Количество программ', value: '18' },
+      { label: 'Габариты', value: '170 x 80 x 135 см' },
+      { label: 'Вес', value: '68 кг' }
+    ],
     setup: [
       'Установите дорожку на расстоянии 2м от стен',
       'Подключите Wi-Fi модуль к консоли',
@@ -178,7 +227,7 @@ const TreadmillDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [treadmill, setTreadmill] = useState<Treadmill | null>(null);
-  const [currentImage, setCurrentImage] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string>('');
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -186,6 +235,9 @@ const TreadmillDetail = () => {
     if (id) {
       const found = treadmills.find(t => t.id === parseInt(id));
       setTreadmill(found || null);
+      if (found) {
+        setSelectedImage(found.gallery[0]);
+      }
     }
   }, [location]);
 
@@ -193,7 +245,7 @@ const TreadmillDetail = () => {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-2xl font-bold mb-4">Инструкция не найдена</h2>
+          <h2 className="text-2xl font-bold mb-4">Беговая дорожка не найдена</h2>
           <Button onClick={() => navigate('/')}>Вернуться на главную</Button>
         </div>
       </div>
@@ -218,24 +270,28 @@ const TreadmillDetail = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <div>
-            <div className="relative h-96 bg-muted rounded-lg overflow-hidden mb-4">
+          <div className="space-y-4">
+            <div className="relative h-96 bg-muted rounded-lg overflow-hidden">
               <img 
-                src={treadmill.gallery[currentImage]} 
+                src={selectedImage} 
                 alt={treadmill.name}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-all duration-300"
               />
             </div>
-            <div className="flex gap-2">
+            <div className="grid grid-cols-4 gap-3">
               {treadmill.gallery.map((img, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setCurrentImage(idx)}
-                  className={`w-20 h-20 rounded border-2 overflow-hidden ${
-                    currentImage === idx ? 'border-primary' : 'border-transparent'
+                  onClick={() => setSelectedImage(img)}
+                  className={`relative h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImage === img ? 'border-primary' : 'border-transparent hover:border-muted-foreground'
                   }`}
                 >
-                  <img src={img} alt={`${treadmill.name} ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img 
+                    src={img} 
+                    alt={`${treadmill.name} - фото ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                  />
                 </button>
               ))}
             </div>
@@ -243,9 +299,7 @@ const TreadmillDetail = () => {
           
           <div>
             <Badge variant="secondary" className="mb-3">{treadmill.model}</Badge>
-            <h2 className="text-4xl font-bold text-secondary mb-4">
-              Инструкция: {treadmill.name}
-            </h2>
+            <h2 className="text-4xl font-bold text-secondary mb-4">{treadmill.name}</h2>
             
             <p className="text-muted-foreground mb-6 leading-relaxed">
               {treadmill.description}
@@ -259,13 +313,31 @@ const TreadmillDetail = () => {
               ))}
             </div>
 
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-2 text-sm">
+                <Icon name="Gauge" size={16} className="text-muted-foreground" />
+                <span className="text-muted-foreground">Макс. скорость:</span>
+                <span className="font-semibold">{treadmill.maxSpeed}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Icon name="Zap" size={16} className="text-muted-foreground" />
+                <span className="text-muted-foreground">Мощность:</span>
+                <span className="font-semibold">{treadmill.power}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm">
+                <Icon name="Maximize2" size={16} className="text-muted-foreground" />
+                <span className="text-muted-foreground">Беговое полотно:</span>
+                <span className="font-semibold">{treadmill.runningArea}</span>
+              </div>
+            </div>
+
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
               <div className="flex items-start gap-3">
                 <Icon name="AlertTriangle" size={24} className="text-yellow-600 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold text-yellow-900 mb-1">Важно!</h4>
                   <p className="text-sm text-yellow-800">
-                    Перед использованием внимательно прочитайте инструкцию по технике безопасности
+                    Перед использованием внимательно прочитайте инструкцию
                   </p>
                 </div>
               </div>
@@ -273,7 +345,28 @@ const TreadmillDetail = () => {
           </div>
         </div>
 
-        <div className="space-y-6">
+        <Tabs defaultValue="specs" className="mb-12">
+          <TabsList className="grid w-full grid-cols-2 max-w-2xl">
+            <TabsTrigger value="specs">Характеристики</TabsTrigger>
+            <TabsTrigger value="manual">Инструкция по эксплуатации</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="specs" className="mt-6">
+            <Card>
+              <CardContent className="pt-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  {treadmill.specs.map((spec, idx) => (
+                    <div key={idx} className="flex justify-between border-b border-border pb-3">
+                      <span className="text-muted-foreground">{spec.label}</span>
+                      <span className="font-semibold">{spec.value}</span>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          
+          <TabsContent value="manual" className="mt-6 space-y-6">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -372,22 +465,16 @@ const TreadmillDetail = () => {
               </Accordion>
             </CardContent>
           </Card>
-        </div>
+          </TabsContent>
+        </Tabs>
 
-        <div className="bg-primary text-white rounded-lg p-8 text-center mt-12">
-          <Icon name="HeadphonesIcon" size={48} className="mx-auto mb-4" />
+        <div className="bg-secondary text-white rounded-lg p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Нужна помощь?</h3>
-          <p className="mb-6 text-white/90">Наша служба поддержки работает круглосуточно</p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" variant="secondary">
-              <Icon name="Phone" size={20} className="mr-2" />
-              8-800-555-35-35
-            </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-              <Icon name="Mail" size={20} className="mr-2" />
-              support@runreview.ru
-            </Button>
-          </div>
+          <p className="mb-6 text-white/80">Наши эксперты ответят на любые вопросы</p>
+          <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+            <Icon name="MessageCircle" size={20} className="mr-2" />
+            Связаться с экспертом
+          </Button>
         </div>
       </div>
 
