@@ -29,8 +29,8 @@ interface Treadmill {
 const treadmills: Treadmill[] = [
   {
     id: 1,
-    name: 'ProRunner X5',
-    model: 'PRX-5000',
+    name: 'Swollen Compact T3',
+    model: 'SC-T3',
     maxSpeed: '20 км/ч',
     power: '3.0 HP',
     runningArea: '140 x 50 см',
@@ -42,7 +42,7 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Амортизация', 'LCD дисплей', 'Bluetooth'],
-    description: 'Профессиональная беговая дорожка ProRunner X5 создана для интенсивных тренировок дома. Мощный двигатель 3.0 HP обеспечивает плавный ход даже на максимальных скоростях до 20 км/ч.',
+    description: 'Профессиональная беговая дорожка Swollen Compact T3 создана для интенсивных тренировок дома. Мощный двигатель 3.0 HP обеспечивает плавный ход даже на максимальных скоростях до 20 км/ч.',
     specs: [
       { label: 'Максимальная скорость', value: '20 км/ч' },
       { label: 'Мощность двигателя', value: '3.0 HP' },
@@ -97,8 +97,8 @@ const treadmills: Treadmill[] = [
   },
   {
     id: 2,
-    name: 'HomeRun Elite',
-    model: 'HRE-2500',
+    name: 'Swollen Compact T5',
+    model: 'SC-T5',
     maxSpeed: '16 км/ч',
     power: '2.5 HP',
     runningArea: '130 x 45 см',
@@ -110,7 +110,7 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=600&fit=crop'
     ],
     features: ['Складная', 'USB порт', '12 программ'],
-    description: 'HomeRun Elite — идеальное решение для домашних тренировок. Складная конструкция экономит место в квартире.',
+    description: 'Swollen Compact T5 — идеальное решение для домашних тренировок. Складная конструкция экономит место в квартире.',
     specs: [
       { label: 'Максимальная скорость', value: '16 км/ч' },
       { label: 'Мощность двигателя', value: '2.5 HP' },
@@ -160,8 +160,8 @@ const treadmills: Treadmill[] = [
   },
   {
     id: 3,
-    name: 'FitMax Pro',
-    model: 'FMP-3000',
+    name: 'Swollen Compact T9',
+    model: 'SC-T9',
     maxSpeed: '18 км/ч',
     power: '2.8 HP',
     runningArea: '135 x 48 см',
@@ -173,7 +173,7 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Wi-Fi', 'Пульсометр', 'Наклон 15%'],
-    description: 'FitMax Pro сочетает современные технологии и надежность. Wi-Fi подключение позволяет синхронизировать тренировки с облаком.',
+    description: 'Swollen Compact T9 сочетает современные технологии и надежность. Wi-Fi подключение позволяет синхронизировать тренировки с облаком.',
     specs: [
       { label: 'Максимальная скорость', value: '18 км/ч' },
       { label: 'Мощность двигателя', value: '2.8 HP' },

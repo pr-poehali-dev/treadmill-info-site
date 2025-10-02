@@ -20,8 +20,8 @@ interface Treadmill {
 const treadmills: Treadmill[] = [
   {
     id: 1,
-    name: 'ProRunner X5',
-    model: 'PRX-5000',
+    name: 'Swollen Compact T3',
+    model: 'SC-T3',
     maxSpeed: '20 км/ч',
     power: '3.0 HP',
     runningArea: '140 x 50 см',
@@ -31,8 +31,8 @@ const treadmills: Treadmill[] = [
   },
   {
     id: 2,
-    name: 'HomeRun Elite',
-    model: 'HRE-2500',
+    name: 'Swollen Compact T5',
+    model: 'SC-T5',
     maxSpeed: '16 км/ч',
     power: '2.5 HP',
     runningArea: '130 x 45 см',
@@ -42,8 +42,8 @@ const treadmills: Treadmill[] = [
   },
   {
     id: 3,
-    name: 'FitMax Pro',
-    model: 'FMP-3000',
+    name: 'Swollen Compact T9',
+    model: 'SC-T9',
     maxSpeed: '18 км/ч',
     power: '2.8 HP',
     runningArea: '135 x 48 см',
