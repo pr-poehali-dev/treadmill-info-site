@@ -15,6 +15,7 @@ interface Treadmill {
   runningArea: string;
   price: string;
   image: string;
+  gallery: string[];
   features: string[];
   description: string;
   pros: string[];
@@ -32,6 +33,12 @@ const treadmills: Treadmill[] = [
     runningArea: '140 x 50 см',
     price: '89 990 ₽',
     image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
+    ],
     features: ['Амортизация', 'LCD дисплей', 'Bluetooth'],
     description: 'Профессиональная беговая дорожка ProRunner X5 создана для интенсивных тренировок дома. Мощный двигатель 3.0 HP обеспечивает плавный ход даже на максимальных скоростях до 20 км/ч. Широкое беговое полотно 140x50 см подходит для бегунов любого роста.',
     pros: [
@@ -66,6 +73,12 @@ const treadmills: Treadmill[] = [
     runningArea: '130 x 45 см',
     price: '54 990 ₽',
     image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=600&fit=crop'
+    ],
     features: ['Складная', 'USB порт', '12 программ'],
     description: 'HomeRun Elite — идеальное решение для домашних тренировок. Складная конструкция экономит место в квартире, а 12 встроенных программ разнообразят ваши пробежки.',
     pros: [
@@ -100,6 +113,12 @@ const treadmills: Treadmill[] = [
     runningArea: '135 x 48 см',
     price: '67 990 ₽',
     image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
+    gallery: [
+      'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
+      'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
+    ],
     features: ['Wi-Fi', 'Пульсометр', 'Наклон 15%'],
     description: 'FitMax Pro сочетает современные технологии и надежность. Wi-Fi подключение позволяет синхронизировать тренировки с облаком, а встроенный пульсометр контролирует ваш пульс.',
     pros: [
@@ -131,6 +150,7 @@ const TreadmillDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [treadmill, setTreadmill] = useState<Treadmill | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>('');
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -138,6 +158,9 @@ const TreadmillDetail = () => {
     if (id) {
       const found = treadmills.find(t => t.id === parseInt(id));
       setTreadmill(found || null);
+      if (found) {
+        setSelectedImage(found.gallery[0]);
+      }
     }
   }, [location]);
 
@@ -170,12 +193,31 @@ const TreadmillDetail = () => {
 
       <div className="container mx-auto px-4 py-8">
         <div className="grid lg:grid-cols-2 gap-8 mb-12">
-          <div>
-            <img 
-              src={treadmill.image} 
-              alt={treadmill.name}
-              className="w-full h-96 object-cover rounded-lg"
-            />
+          <div className="space-y-4">
+            <div className="relative h-96 bg-muted rounded-lg overflow-hidden">
+              <img 
+                src={selectedImage} 
+                alt={treadmill.name}
+                className="w-full h-full object-cover transition-all duration-300"
+              />
+            </div>
+            <div className="grid grid-cols-4 gap-3">
+              {treadmill.gallery.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedImage(img)}
+                  className={`relative h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImage === img ? 'border-primary' : 'border-transparent hover:border-muted-foreground'
+                  }`}
+                >
+                  <img 
+                    src={img} 
+                    alt={`${treadmill.name} - фото ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
           
           <div>
