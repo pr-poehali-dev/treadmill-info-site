@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -53,6 +54,7 @@ const treadmills: Treadmill[] = [
 ];
 
 const Index = () => {
+  const navigate = useNavigate();
   const [selectedTreadmills, setSelectedTreadmills] = useState<number[]>([]);
 
   const toggleComparison = (id: number) => {
@@ -157,7 +159,7 @@ const Index = () => {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button className="flex-1" onClick={() => alert(`Открываем детальную страницу ${treadmill.name}`)}>
+                    <Button className="flex-1" onClick={() => navigate(`/treadmill?id=${treadmill.id}`)}>
                       Подробнее
                     </Button>
                     <Button 
