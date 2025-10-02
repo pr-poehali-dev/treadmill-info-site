@@ -26,7 +26,7 @@ const treadmills: Treadmill[] = [
     power: '1.95 л.с.',
     runningArea: '103 x 39 см',
     price: '89 990 ₽',
-    image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=400&h=300&fit=crop',
+    image: '/img/79185606-2631-4068-9378-10fe7abcfe29.jpg',
     features: ['Компактная', 'Без поручней', 'Складная']
   },
   {
@@ -37,7 +37,7 @@ const treadmills: Treadmill[] = [
     power: '1.95 л.с.',
     runningArea: '110 x 39 см',
     price: '54 990 ₽',
-    image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=400&h=300&fit=crop',
+    image: '/img/cce6df23-1203-41c5-81d5-edd32a505bf0.jpg',
     features: ['LCD-дисплей', 'Пульт управления', 'Складная']
   },
   {
@@ -48,7 +48,7 @@ const treadmills: Treadmill[] = [
     power: '2.5 л.с.',
     runningArea: '120 x 42 см',
     price: '67 990 ₽',
-    image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=400&h=300&fit=crop',
+    image: '/img/3a3c8edf-ff24-4517-98d6-b8425c650ffd.jpg',
     features: ['Топовая модель', 'Улучшенная амортизация', 'Тихий ход']
   }
 ];

@@ -34,9 +34,9 @@ const treadmills: Treadmill[] = [
     maxSpeed: '8 км/ч',
     power: '1.95 л.с.',
     runningArea: '103 x 39 см',
-    image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
+    image: '/img/79185606-2631-4068-9378-10fe7abcfe29.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
+      '/img/79185606-2631-4068-9378-10fe7abcfe29.jpg',
       'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
@@ -102,9 +102,9 @@ const treadmills: Treadmill[] = [
     maxSpeed: '10 км/ч',
     power: '1.95 л.с.',
     runningArea: '110 x 39 см',
-    image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
+    image: '/img/cce6df23-1203-41c5-81d5-edd32a505bf0.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
+      '/img/cce6df23-1203-41c5-81d5-edd32a505bf0.jpg',
       'https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=600&fit=crop'
@@ -165,9 +165,9 @@ const treadmills: Treadmill[] = [
     maxSpeed: '12 км/ч',
     power: '2.5 л.с.',
     runningArea: '120 x 42 см',
-    image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
+    image: '/img/3a3c8edf-ff24-4517-98d6-b8425c650ffd.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
+      '/img/3a3c8edf-ff24-4517-98d6-b8425c650ffd.jpg',
       'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=800&h=600&fit=crop',
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
