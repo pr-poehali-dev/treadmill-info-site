@@ -157,7 +157,7 @@ const Index = () => {
                   </div>
 
                   <div className="flex gap-2">
-                    <Button className="flex-1">
+                    <Button className="flex-1" onClick={() => alert(`Открываем детальную страницу ${treadmill.name}`)}>
                       Подробнее
                     </Button>
                     <Button 
