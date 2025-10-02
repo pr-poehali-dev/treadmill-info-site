@@ -22,34 +22,34 @@ const treadmills: Treadmill[] = [
     id: 1,
     name: 'Swollen Compact T3',
     model: 'SC-T3',
-    maxSpeed: '20 км/ч',
-    power: '3.0 HP',
-    runningArea: '140 x 50 см',
+    maxSpeed: '8 км/ч',
+    power: '1.95 л.с.',
+    runningArea: '103 x 39 см',
     price: '89 990 ₽',
     image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=400&h=300&fit=crop',
-    features: ['Амортизация', 'LCD дисплей', 'Bluetooth']
+    features: ['Компактная', 'Без поручней', 'Складная']
   },
   {
     id: 2,
     name: 'Swollen Compact T5',
     model: 'SC-T5',
-    maxSpeed: '16 км/ч',
-    power: '2.5 HP',
-    runningArea: '130 x 45 см',
+    maxSpeed: '10 км/ч',
+    power: '1.95 л.с.',
+    runningArea: '110 x 39 см',
     price: '54 990 ₽',
     image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=400&h=300&fit=crop',
-    features: ['Складная', 'USB порт', '12 программ']
+    features: ['LCD-дисплей', 'Пульт управления', 'Складная']
   },
   {
     id: 3,
     name: 'Swollen Compact T9',
     model: 'SC-T9',
-    maxSpeed: '18 км/ч',
-    power: '2.8 HP',
-    runningArea: '135 x 48 см',
+    maxSpeed: '12 км/ч',
+    power: '2.5 л.с.',
+    runningArea: '120 x 42 см',
     price: '67 990 ₽',
     image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=400&h=300&fit=crop',
-    features: ['Wi-Fi', 'Пульсометр', 'Наклон 15%']
+    features: ['Топовая модель', 'Улучшенная амортизация', 'Тихий ход']
   }
 ];
 

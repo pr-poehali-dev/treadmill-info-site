@@ -31,9 +31,9 @@ const treadmills: Treadmill[] = [
     id: 1,
     name: 'Swollen Compact T3',
     model: 'SC-T3',
-    maxSpeed: '20 км/ч',
-    power: '3.0 HP',
-    runningArea: '140 x 50 см',
+    maxSpeed: '8 км/ч',
+    power: '1.95 л.с.',
+    runningArea: '103 x 39 см',
     image: 'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&h=600&fit=crop',
@@ -42,16 +42,16 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Амортизация', 'LCD дисплей', 'Bluetooth'],
-    description: 'Профессиональная беговая дорожка Swollen Compact T3 создана для интенсивных тренировок дома. Мощный двигатель 3.0 HP обеспечивает плавный ход даже на максимальных скоростях до 20 км/ч.',
+    description: 'Компактная беговая дорожка Swollen Compact T3 — идеальное решение для ходьбы и лёгких тренировок дома. Компактная, без поручней, легко складывается и убирается под кровать или диван.',
     specs: [
-      { label: 'Максимальная скорость', value: '20 км/ч' },
-      { label: 'Мощность двигателя', value: '3.0 HP' },
-      { label: 'Размер бегового полотна', value: '140 x 50 см' },
-      { label: 'Максимальный вес пользователя', value: '150 кг' },
-      { label: 'Угол наклона', value: '0-15%' },
-      { label: 'Количество программ', value: '24' },
-      { label: 'Габариты', value: '180 x 85 x 145 см' },
-      { label: 'Вес', value: '85 кг' }
+      { label: 'Максимальная скорость', value: '8 км/ч' },
+      { label: 'Мощность двигателя', value: '1.95 л.с.' },
+      { label: 'Размер бегового полотна', value: '103 x 39 см' },
+      { label: 'Максимальный вес пользователя', value: '110 кг' },
+      { label: 'Тип', value: 'Электрическая, компактная' },
+      { label: 'Особенности', value: 'Без поручней, складная' },
+      { label: 'Габариты', value: '125 x 52 x 12 см' },
+      { label: 'Вес', value: '25 кг' }
     ],
     setup: [
       'Распакуйте беговую дорожку и проверьте комплектацию',
@@ -99,9 +99,9 @@ const treadmills: Treadmill[] = [
     id: 2,
     name: 'Swollen Compact T5',
     model: 'SC-T5',
-    maxSpeed: '16 км/ч',
-    power: '2.5 HP',
-    runningArea: '130 x 45 см',
+    maxSpeed: '10 км/ч',
+    power: '1.95 л.с.',
+    runningArea: '110 x 39 см',
     image: 'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1638443115523-0d7e538f7e3a?w=800&h=600&fit=crop',
@@ -110,16 +110,16 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800&h=600&fit=crop'
     ],
     features: ['Складная', 'USB порт', '12 программ'],
-    description: 'Swollen Compact T5 — идеальное решение для домашних тренировок. Складная конструкция экономит место в квартире.',
+    description: 'Swollen Compact T5 — улучшенная версия T3 с увеличенной скоростью до 10 км/ч. Подходит для активной ходьбы и лёгкого бега. Складная, компактная, удобно хранить дома.',
     specs: [
-      { label: 'Максимальная скорость', value: '16 км/ч' },
-      { label: 'Мощность двигателя', value: '2.5 HP' },
-      { label: 'Размер бегового полотна', value: '130 x 45 см' },
-      { label: 'Максимальный вес пользователя', value: '120 кг' },
-      { label: 'Угол наклона', value: '0-10%' },
-      { label: 'Количество программ', value: '12' },
-      { label: 'Габариты', value: '160 x 75 x 130 см' },
-      { label: 'Вес', value: '55 кг' }
+      { label: 'Максимальная скорость', value: '10 км/ч' },
+      { label: 'Мощность двигателя', value: '1.95 л.с.' },
+      { label: 'Размер бегового полотна', value: '110 x 39 см' },
+      { label: 'Максимальный вес пользователя', value: '110 кг' },
+      { label: 'Тип', value: 'Электрическая, складная' },
+      { label: 'Особенности', value: 'LCD-дисплей, пульт управления' },
+      { label: 'Габариты', value: '130 x 55 x 13 см' },
+      { label: 'Вес', value: '28 кг' }
     ],
     setup: [
       'Аккуратно распакуйте дорожку и разложите на полу',
@@ -162,9 +162,9 @@ const treadmills: Treadmill[] = [
     id: 3,
     name: 'Swollen Compact T9',
     model: 'SC-T9',
-    maxSpeed: '18 км/ч',
-    power: '2.8 HP',
-    runningArea: '135 x 48 см',
+    maxSpeed: '12 км/ч',
+    power: '2.5 л.с.',
+    runningArea: '120 x 42 см',
     image: 'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
     gallery: [
       'https://images.unsplash.com/photo-1605296867304-46d5465a13f1?w=800&h=600&fit=crop',
@@ -173,16 +173,16 @@ const treadmills: Treadmill[] = [
       'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&h=600&fit=crop'
     ],
     features: ['Wi-Fi', 'Пульсометр', 'Наклон 15%'],
-    description: 'Swollen Compact T9 сочетает современные технологии и надежность. Wi-Fi подключение позволяет синхронизировать тренировки с облаком.',
+    description: 'Swollen Compact T9 — топовая модель в линейке компактных дорожек. Увеличенная скорость до 12 км/ч позволяет комфортно бегать. Больше полотно, мощнее двигатель.',
     specs: [
-      { label: 'Максимальная скорость', value: '18 км/ч' },
-      { label: 'Мощность двигателя', value: '2.8 HP' },
-      { label: 'Размер бегового полотна', value: '135 x 48 см' },
-      { label: 'Максимальный вес пользователя', value: '130 кг' },
-      { label: 'Угол наклона', value: '0-15%' },
-      { label: 'Количество программ', value: '18' },
-      { label: 'Габариты', value: '170 x 80 x 135 см' },
-      { label: 'Вес', value: '68 кг' }
+      { label: 'Максимальная скорость', value: '12 км/ч' },
+      { label: 'Мощность двигателя', value: '2.5 л.с.' },
+      { label: 'Размер бегового полотна', value: '120 x 42 см' },
+      { label: 'Максимальный вес пользователя', value: '120 кг' },
+      { label: 'Тип', value: 'Электрическая, складная' },
+      { label: 'Особенности', value: 'Улучшенная амортизация, тихий ход' },
+      { label: 'Габариты', value: '140 x 60 x 14 см' },
+      { label: 'Вес', value: '32 кг' }
     ],
     setup: [
       'Установите дорожку на расстоянии 2м от стен',
